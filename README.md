@@ -29,9 +29,20 @@ Tag and Push the Image:
 docker tag ml-app username/ml-app
 docker push username/ml-app
 ```
-On the VM, Pull and Run the Image:
 
-```bash
-docker pull username/ml-app
-docker run ml-app
-```
+# On the VM, Pull and Run the Image:
+
+
+1. **Pull the Docker Image**:
+    ```bash
+    docker pull dukeieee/ml-app
+    ```
+    This command downloads the Docker image `dukeieee/ml-app` from Docker Hub to your local system or VM. The image contains the Python ML app and its required dependencies.
+
+2. **Run the Docker Container**:
+    ```bash
+    docker run dukeieee/ml-app
+    ```
+    This command starts a container using the downloaded image. The app will train a machine learning model on the iris dataset and print the model's accuracy and predictions directly to your terminal.
+
+This approach ensures that the app runs with all necessary dependencies, regardless of the environment, providing a consistent and reproducible setup.
